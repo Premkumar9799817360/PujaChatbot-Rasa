@@ -1,0 +1,978 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+
+- intent: greets
+  examples: |
+    - first line 
+    - invitation
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+# Festival Puja
+- intent: ask_makar_sankranti
+  examples: |
+    - What is Makar Sankranti?
+    - Tell me about Makar Sankranti.
+    - Explain Makar Sankranti to me.
+    - How is Makar Sankranti celebrated?
+    - What do people do on Makar Sankranti?
+    - When is Makar Sankranti celebrated?
+    - Why do people celebrate Makar Sankranti?
+    - Describe Makar Sankranti.
+    - What's special about Makar Sankranti?
+    - Can you tell me more about Makar Sankranti?
+    - Makar sankranti
+    - sankranti
+    - makar 
+
+- intent: ask_basant_panchami
+  examples: |
+    - What is Basant Panchami?
+    - What happens on Basant Panchami?
+    - Explain Basant Panchami.
+    - Tell me about the Basant Panchami festival.
+    - Why do we celebrate Basant Panchami?
+    - What do people do on Basant Panchami?
+    - When is Basant Panchami celebrated?
+    - How is Basant Panchami celebrated?
+    - Describe Basant Panchami.
+    - What does Basant Panchami signify?
+    - basant panchami
+    - pandhami
+    - basant
+
+
+- intent: ask_maha_shivaratri
+  examples: |
+    - What is Maha Shivaratri?
+    - Tell me about Maha Shivaratri.
+    - Explain Maha Shivaratri to me.
+    - Why is Maha Shivaratri celebrated?
+    - What happens on Maha Shivaratri?
+    - When is Maha Shivaratri?
+    - How do people celebrate Maha Shivaratri?
+    - What's special about Maha Shivaratri?
+    - Why do Hindus celebrate Maha Shivaratri?
+    - Describe Maha Shivaratri.
+    - Shivaratri.
+    - mahadev
+
+- intent: ask_holi_dahan
+  examples: |
+    - What is Holi Dahan?
+    - Tell me about Holi Dahan.
+    - Why do people celebrate Holi Dahan?
+    - What happens on Holi Dahan?
+    - How is Holi Dahan celebrated?
+    - When is Holi Dahan?
+    - Explain Holi Dahan to me.
+    - What is the significance of Holi Dahan?
+    - What do people do during Holi Dahan?
+    - Why is Holi Dahan important?
+    - holi 
+    - holika dahan
+    - holi dahan
+
+
+- intent: ask_gangaur
+  examples: |
+    - What is Gangaur?
+    - What do people do on Gangaur?
+    - Explain Gangaur to me.
+    - When is Gangaur celebrated?
+    - Why do we celebrate Gangaur?
+    - How do people celebrate Gangaur?
+    - What is the significance of Gangaur?
+    - Describe Gangaur.
+    - Why is Gangaur important?
+    - What happens during Gangaur?
+    - gangaur puja
+    - Gangaur
+
+- intent: ask_ram_navami
+  examples: |
+    - What is Ram Navami?
+    - Tell me about Ram Navami.
+    - Explain Ram Navami to me.
+    - Why is Ram Navami celebrated?
+    - What happens on Ram Navami?
+    - When is Ram Navami?
+    - How do people celebrate Ram Navami?
+    - What's special about Ram Navami?
+    - Why do Hindus celebrate Ram Navami?
+    - Describe Ram Navami.
+    - ram navami
+    - ram puja
+    
+
+- intent: ask_hanuman_jayanti
+  examples: |
+    - What is Hanuman Jayanti?
+    - Tell me about Hanuman Jayanti.
+    - Explain Hanuman Jayanti to me.
+    - Why is Hanuman Jayanti celebrated?
+    - What happens on Hanuman Jayanti?
+    - When is Hanuman Jayanti?
+    - How do people celebrate Hanuman Jayanti?
+    - What's special about Hanuman Jayanti?
+    - Why do Hindus celebrate Hanuman Jayanti?
+    - Describe Hanuman Jayanti.
+    - hanuman
+    - hanuman jayanti
+
+
+- intent: ask_nag_panchami
+  examples: |
+    - What is Nag Panchami?
+    - Tell me about Nag Panchami.
+    - Explain Nag Panchami to me.
+    - Why is Nag Panchami celebrated?
+    - What happens on Nag Panchami?
+    - When is Nag Panchami?
+    - How do people celebrate Nag Panchami?
+    - What's special about Nag Panchami?
+    - Why do Hindus celebrate Nag Panchami?
+    - Describe Nag Panchami.
+    - nag panchami
+    
+
+- intent: ask_raksha_bandhan
+  examples: |
+    - What is Raksha Bandhan?
+    - Tell me about Raksha Bandhan.
+    - Why do people celebrate Raksha Bandhan?
+    - What happens on Raksha Bandhan?
+    - How is Raksha Bandhan celebrated?
+    - When is Raksha Bandhan?
+    - Explain Raksha Bandhan to me.
+    - What is the significance of Raksha Bandhan?
+    - Why is Raksha Bandhan important?
+    - What do people do on Raksha Bandhan?
+    - raksha bandhan
+    - rakhi
+
+
+- intent: ask_krishna_janmashtami
+  examples: |
+    - What is Krishna Janmashtami?
+    - Tell me about Krishna Janmashtami.
+    - Why do people celebrate Krishna Janmashtami?
+    - What happens on Krishna Janmashtami?
+    - How is Krishna Janmashtami celebrated?
+    - When is Krishna Janmashtami?
+    - Explain Krishna Janmashtami to me.
+    - What is the significance of Krishna Janmashtami?
+    - Why is Krishna Janmashtami important?
+    - What do people do on Krishna Janmashtami?
+    - krishan janmashtami
+    - janmashtami
+
+- intent: ask_ganesha_chaturthi
+  examples: |
+    - What is Ganesha Chaturthi?
+    - Tell me about Ganesha Chaturthi.
+    - Explain Ganesha Chaturthi to me.
+    - Why is Ganesha Chaturthi celebrated?
+    - What happens on Ganesha Chaturthi?
+    - When is Ganesha Chaturthi?
+    - How do people celebrate Ganesha Chaturthi?
+    - What's special about Ganesha Chaturthi?
+    - Why do Hindus celebrate Ganesha Chaturthi?
+    - Describe Ganesha Chaturthi.
+    - ganesh
+    - chaturthi
+    - ganesh chaturthi
+
+
+- intent: ask_vishwakarma_puja
+  examples: |
+    - What is Vishwakarma Puja?
+    - Tell me about Vishwakarma Puja.
+    - Explain Vishwakarma Puja to me.
+    - Why is Vishwakarma Puja celebrated?
+    - What happens on Vishwakarma Puja?
+    - When is Vishwakarma Puja?
+    - How do people celebrate Vishwakarma Puja?
+    - What's special about Vishwakarma Puja?
+    - Why do Hindus celebrate Vishwakarma Puja?
+    - Describe Vishwakarma Puja.
+    - vishwakarma puja
+    - vishwakarma
+
+- intent: ask_navratri
+  examples: |
+    - What is Navratri?
+    - Tell me about Navratri.
+    - Explain Navratri to me.
+    - Why is Navratri celebrated?
+    - What happens during Navratri?
+    - When is Navratri?
+    - How do people celebrate Navratri?
+    - What's special about Navratri?
+    - Why do Hindus celebrate Navratri?
+    - Describe Navratri.
+    - navratri
+    - hindu navratri
+
+- intent: ask_karwa_chauth
+  examples: |
+    - What is Karwa Chauth?
+    - Tell me about Karwa Chauth.
+    - Explain Karwa Chauth to me.
+    - Why is Karwa Chauth celebrated?
+    - What happens on Karwa Chauth?
+    - When is Karwa Chauth?
+    - How do people celebrate Karwa Chauth?
+    - What's special about Karwa Chauth?
+    - Why do Hindus celebrate Karwa Chauth?
+    - Describe Karwa Chauth.
+    - karwa chauth
+    - karwa
+
+- intent: ask_dhanteras
+  examples: |
+    - What is Dhanteras?
+    - Tell me about Dhanteras.
+    - Explain Dhanteras to me.
+    - Why is Dhanteras celebrated?
+    - What happens on Dhanteras?
+    - When is Dhanteras?
+    - How do people celebrate Dhanteras?
+    - What's special about Dhanteras?
+    - Why do Hindus celebrate Dhanteras?
+    - Describe Dhanteras.
+    - dhanteras
+    - dhanteras puja
+
+- intent: ask_diwali
+  examples: |
+    - What is Diwali?
+    - Tell me about Diwali.
+    - Explain Diwali to me.
+    - Why is Diwali celebrated?
+    - What happens on Deepavali?
+    - When is Diwali?
+    - How do people celebrate Diwali?
+    - What's special about Diwali?
+    - Why do Hindus celebrate Diwali?
+    - Describe Diwali.
+    - Deepavali puja
+    - diwali puja
+    - deepavali
+
+
+- intent: ask_govardhan
+  examples: |
+    - What is Govardhan?
+    - Tell me about Govardhan.
+    - Explain Govardhan to me.
+    - Why is Govardhan celebrated?
+    - What happens on Govardhan?
+    - When is Govardhan celebrated?
+    - How do people celebrate Govardhan?
+    - What's special about Govardhan?
+    - Why do Hindus celebrate Govardhan?
+    - Describe Govardhan.
+    - goverdhan puja
+    - goverdhan 
+
+- intent: ask_tulsi_vivah
+  examples: |
+    - What is Tulsi Vivah?
+    - Tell me about Tulsi Vivah.
+    - Explain Tulsi Vivah to me.
+    - Why is Tulsi Vivah celebrated?
+    - What happens during Tulsi Vivah?
+    - When is Tulsi Vivah?
+    - How do people celebrate Tulsi Vivah?
+    - What's special about Tulsi Vivah?
+    - Why do Hindus celebrate Tulsi Vivah?
+    - Describe Tulsi Vivah.
+    - tulsi puja
+    - tulsi vivah
+
+
+# Unwanted Question 
+- intent: unknown
+  examples: |
+    - 123
+    - ^&*&%*&^
+    - random text
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+    - 3
+    - What's the weather like today?
+    - Can you play music for me?
+    - What time is it in New York?
+    - What's the capital of France?
+    - Can you tell me a joke?
+    - How many continents are there?
+    - What is the meaning of life?
+    - Can you translate this for me?
+    - What's the latest news?
+    - What's the stock market doing today?
+    - Can you recommend a movie?
+    - Who invented the light bulb?
+    - Can you help me with my homework?
+    - How far is the moon?
+    - Can you find me a job?
+    - How do you make a pizza?
+    - What's the population of China?
+    - Who painted the Mona Lisa?
+    - What's the best way to learn a language?
+    - Can you lend me some money?
+    - How do you start a business?
+    - What's the fastest car in the world?
+    - How do you cook spaghetti?
+    - What's the tallest building in the world?
+    - Can you give me directions to the beach?
+    - How do you write a resume?
+    - Can you solve this math problem?
+    - What's the most popular book?
+    - How do you fix a computer?
+    - What's the best smartphone?
+    - How do you meditate?
+    - What's the most visited website?
+    - What's the price of Bitcoin?
+    - How do you invest in stocks?
+    - ¿Cuál es la capital de España?
+    - 42 is the answer to what?
+    - What does "Lorem ipsum" mean?
+    - 😃 Can you understand emojis?
+    - How do I get to the nearest ATM?
+    - @ What is your email address?
+    - Can you *bold* text?
+    - How do you use #hashtags?
+    - Is $5 a good?
+    - What does % mean?
+    - How do you find π?
+    - Can you help with HTML & CSS?
+    - What is C++ used for?
+    - Where is the shift key on a keyboard?
+    - Can you do @mentions?
+    - What is the use of & symbol?
+    - Can you write "Hello, World!" in different languages?
+    - How to make a newline \n in a string?
+    - What is the meaning of ~?
+    - Explain the use of ^ caret.
+    - How do you escape characters in JSON?
+    - What is the | (pipe) symbol used for?
+    - Can you find <  on a keyboard?
+
+
+
+# puja Categories
+- intent: select_special_puja
+  examples: |
+    - I want to do a special puja
+    - Special Puja
+
+- intent: select_personal_puja
+  examples: |
+    - I want to do a personal puja
+    - Personal Puja
+
+- intent: select_daily_puja
+  examples: |
+    - I want to do a daily puja
+    - Daily Puja
+
+- intent: select_festival_puja
+  examples: |
+    - I want to do a festival puja
+    - Festival Puja
+
+#  special puja
+- intent: select_durga_puja
+  examples: |
+    - I want to do Durga Puja
+    - Durga Puja
+
+- intent: select_lakshmi_puja
+  examples: |
+    - I want to do Lakshmi Puja
+    - Lakshmi Puja
+
+- intent: select_ganesh_chaturthi_puja
+  examples: |
+    - I want to do Ganesh Chaturthi Puja
+    - Ganesh Chaturthi Puja
+
+- intent: select_satyanarayan_puja
+  examples: |
+    - I want to do Satyanarayan Puja
+    - Satyanarayan Puja
+
+- intent: select_maha_shivaratri_puja
+  examples: |
+    - I want to do Maha Shivaratri Puja
+    - Maha Shivaratri Puja
+
+- intent: select_navagraha_puja
+  examples: |
+    - I want to do Navagraha Puja
+    - Navagraha Puja
+
+- intent: select_saraswati_puja
+  examples: |
+    - I want to do Saraswati Puja
+    - Saraswati Puja
+
+- intent: select_kali_puja
+  examples: |
+    - I want to do Kali Puja
+    - Kali Puja
+
+- intent: select_chandi_puja
+  examples: |
+    - I want to do Chandi Puja
+    - Chandi Puja
+
+- intent: select_pitru_paksha_puja
+  examples: |
+    - I want to do Pitru Paksha Puja
+    - Pitru Paksha Puja
+
+
+
+# daily puja
+- intent: select_sandhya_vandana
+  examples: |
+    - Sandhya Vandana
+    - I want to select Sandhya Vandana
+    - Let's do Sandhya Vandana
+      
+- intent: select_tulsi_puja
+  examples: |
+    - Tulsi Puja
+    - I want to do Tulsi Puja
+    - Let's go with Tulsi Puja
+
+- intent: select_surya_namaskar
+  examples: |
+    - Surya Namaskar
+    - I want to select Surya Namaskar
+    - Let's do Surya Namaskar
+
+- intent: select_gayatri_mantra_japa
+  examples: |
+    - Gayatri Mantra Japa
+    - I want to do Gayatri Mantra Japa
+    - Let's do Gayatri Mantra Japa
+
+- intent: select_agnihotra
+  examples: |
+    - Agnihotra
+    - I want to do Agnihotra
+    - Let's go with Agnihotra
+
+- intent: select_deva_darshan
+  examples: |
+    - Deva Darshan
+    - I want to select Deva Darshan
+    - Let's do Deva Darshan
+
+- intent: select_hanuman_chalisa
+  examples: |
+    - Hanuman Chalisa
+    - I want to do Hanuman Chalisa
+    - Let's do Hanuman Chalisa
+
+
+
+# personal Puja
+- intent: select_griha_pravesh_puja
+  examples: |
+    - I want to perform Griha Pravesh Puja
+    - Select Griha Pravesh Puja
+    - Griha Pravesh Puja please
+    - I choose Griha Pravesh Puja
+
+- intent: select_birthday_puja
+  examples: |
+    - I want to perform Birthday Puja
+    - Select Birthday Puja
+    - Birthday Puja please
+    - I choose Birthday Puja
+
+- intent: select_vivah_puja
+  examples: |
+    - I want to perform Vivah Puja
+    - Select Vivah Puja
+    - Vivah Puja please
+    - I choose Vivah Puja
+
+- intent: select_sankalp_puja
+  examples: |
+    - I want to perform Sankalp Puja
+    - Select Sankalp Puja
+    - Sankalp Puja please
+    - I choose Sankalp Puja
+
+- intent: select_namkaran_puja
+  examples: |
+    - I want to perform Namkaran Puja
+    - Select Namkaran Puja
+    - Namkaran Puja please
+    - I choose Namkaran Puja
+
+- intent: select_sundarkand_path
+  examples: |
+    - I want to perform Sundarkand Path
+    - Select Sundarkand Path
+    - Sundarkand Path please
+    - I choose Sundarkand Path
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    domain.yml
+
+
+
+    version: "3.1"
+
+intents:
+  - greet
+  - greets
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_makar_sankranti
+  - ask_basant_panchami
+  - ask_maha_shivaratri
+  - ask_holi_dahan
+  - ask_gangaur
+  - ask_ram_navami
+  - ask_hanuman_jayanti
+  - ask_nag_panchami
+  - ask_raksha_bandhan
+  - ask_krishna_janmashtami
+  - ask_ganesha_chaturthi
+  - ask_vishwakarma_puja
+  - ask_navratri
+  - ask_karwa_chauth
+  - ask_dhanteras
+  - ask_diwali
+  - ask_govardhan
+  - ask_tulsi_vivah
+  - unknown
+
+
+
+
+  - select_special_puja
+  - select_personal_puja
+  - select_daily_puja
+  - select_festival_puja
+
+
+
+  # special categories
+  - select_durga_puja
+  - select_lakshmi_puja
+  - select_ganesh_chaturthi_puja
+  - select_satyanarayan_puja
+  - select_maha_shivaratri_puja
+  - select_navagraha_puja
+  - select_saraswati_puja
+  - select_kali_puja
+  - select_chandi_puja
+  - select_pitru_paksha_puja
+
+
+
+  # daily Puja Categories
+  - select_sandhya_vandana
+  - select_tulsi_puja
+  - select_surya_namaskar
+  - select_gayatri_mantra_japa
+  - select_agnihotra
+  - select_deva_darshan
+  - select_hanuman_chalisa
+
+
+  # personal puja
+  - select_griha_pravesh_puja
+  - select_birthday_puja
+  - select_vivah_puja
+  - select_sankalp_puja
+  - select_namkaran_puja
+  - select_sundarkand_path
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_greets:
+  - text: 👋 Welcome to our Online Puja Store! 🌐
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_makar_sankranti:
+  - text: "Makar Sankranti is a celebration where people worship the Sun god (Surya)☀️🙏, give thanks to nature 🌾🌻 for providing them with bountiful harvests, and homage to Sun God Surya🙏🛕."
+
+  utter_basant_panchami:
+  - text: "Basant Panchami is one of the prominent Hindu festivals that is dedicated to the Goddess of knowledge, music, and arts 🎨🎶🙏 - Goddess Saraswati 🌼🌸 is known as the festival of spring or the moment when spring comes🌷🌻🌼. "
+
+  utter_maha_shivaratri:
+  - text: "Maha Shivaratri is this sacred Hindu celebration that stands in honor of Lord Shiva  🕉️🙏 and symbolizes light’s triumph over dark and ignorance. 🔥🌙 "
+
+  utter_holi_dahan:
+  - text: "Also recognized as the festival of colors 🌈🎨 , Holi Dahan is among the popular festivals observed throughout India passionately🔥🕺💃  . People light huge bonfires called Holika on the eve of Holi after singing and dancing around them. "
+
+  utter_gangaur:
+  - text: "The term ‘Gangaur’ can be traced back to Lord Shiva’s 🕉️🙏 name ‘Gan’ while another explanation points to Goddess Gauri’s 🌸🌼 name or another form of her by that name (Parvati). "
+
+  utter_ram_navami:
+  - text: "Ram Navami is celebrated as it marked the descent of God Rama 🙏🛕 to earth to liberate the universe from evil  🌟💥."
+
+  utter_hanuman_jayanti:
+  - text: "Hanuman Jayanti is an important Hindu festival that commemorates the birth of Lord 🙏🦁 Hanuman, the devoted disciple of Lord Rama 🛕✨. It is celebrated by millions of devotees all over India and throughout different regions around the world."
+
+  utter_nag_panchami:
+  - text: "Nag Panchami is a traditional Hindu feast day that is about serpent worship  🐍🙏. It is most sacred in the places where Snake worship is embraced, such as India’s Hindus. During snake worship, devotees offer prayers and milk 🥛🌸 to snake idols placed in anthills or under trees where they live. Special rituals involve reciting mantras and offering milk, water, and flowers as an act of honoring snakes. "
+
+  utter_raksha_bandhan:
+  - text: "The festival of Raksha Bandhan is celebrated to cherish the bond between brothers and sisters  💖👫. It is usually a day filled with joy, and it is marked by sisters tying a sacred thread called Rakhi 🎀✨ on their brothers’ wrists that signifies their love for them and also how they will stay connected for life."
+
+  utter_krishna_janmashtami:
+  - text: "Krishna Janmashtami, or Gokulashtami, is a major Hindu festival commemorating the birth of Lord Krishna 🎉🛕  who is the chief god of Hinduism. The whole nation is involved in this event rejoicing joyfully 🕺💃 while all Hindus across the globe do too 🌍🎊."
+
+  utter_ganesha_chaturthi:
+  - text: "Ganesha Chaturthi, also known as Vinayaka Chaturthi 🐘🛕, is a revered Hindu festival that celebrates the birth of Lord Ganesha, the elephant-headed deity of wisdom, prosperity, and removal of obstacles. 🎉🙏🌟."
+
+  utter_vishwakarma_puja:
+  - text: "Vishwakarma Puja is a festival that forms part of Hindu religion whereby respect is given to Lord Vishwakarma 🛠️🏗️ who is believed to be the architect and craftsman of the gods 🛕🙏. "
+
+  utter_navratri:
+  - text: "Navratri, meaning 'nine nights, 🌙✨' is a vibrant Hindu festival celebrated with immense fervor and devotion across India  🕉️🌸. It commemorates the victory of good over evil and honors the divine feminine energy, manifesting in the form of Goddess Durga and her various incarnations 🙏🛕."
+
+  utter_karwa_chauth:
+  - text: "Karwa Chauth is a traditional Hindu festival celebrated by married women  🙏💍 with great devotion and enthusiasm. It is observed to pray for the long life, prosperity, and well-being of their husbands. This day holds immense significance in Hindu culture and is marked by fasting, prayers, and rituals.💖🛕"
+
+  utter_dhanteras:
+  - text: "Dhanteras, also known as Dhanatrayodashi 💰✨, is a significant Hindu festival celebrated two days before Diwali 🪔🎉. It marks the beginning of the five-day Diwali festival and holds immense importance for Hindus, especially for wealth and prosperity🌟🙏. "
+
+  utter_diwali:
+  - text: "Diwali, also known as Deepavali 🪔🎆, is one of the most significant Hindu festivals celebrated with immense enthusiasm and joy 🕯️✨ across India and by Hindu communities around the world. It symbolizes the victory of light over darkness, knowledge over ignorance, and good over evil🌟🎉 "
+
+  utter_govardhan:
+  - text: "Govardhan Puja, also known as Annakut or Annakoot 🛕🍲, is a Hindu festival celebrated the day after Diwali, marking the triumph of Lord Krishna over Indra 🌧️💥, the god of rain and thunderstorms. It holds great significance in Hindu mythology and is observed with devotion and enthusiasm, particularly in North India.🙏🎉"
+
+  utter_tulsi_vivah:
+  - text: "Tulsi Vivah, also known as Tulsi Wedding, is a sacred Hindu festival celebrated to commemorate the ceremonial marriage 💐🌸 of the Tulsi plant (holy basil)  🌿🙏to Lord Vishnu or his avatar Lord Krishna. It marks the beginning of the Hindu wedding season and is observed with great reverence and devotion.🛕✨"
+
+  utter_unknown:
+  - text: "Sorry, I don't understand that. Could you please ask a different question?"
+
+
+
+  utter_puja_option:
+    - text: "Hello! Welcome to our online puja store. Please select your suitable puja:"
+      buttons:
+        - title: "Special Puja"
+          payload: "/select_special_puja"
+        - title: "Personal Puja"
+          payload: "/select_personal_puja"
+        - title: "Daily Puja"
+          payload: "/select_daily_puja"
+        - title: "Festivals"
+          payload: "/select_festival_puja"
+
+
+  utter_special_puja_selected:
+    - text: "Thankyou for selecting special puja, Select Puja Name"
+      buttons:
+        - title: "Durga Puja"
+          payload: "/select_durga_puja"
+        - title: "Lakshmi Puja"
+          payload: "/select_lakshmi_puja"
+        - title: "Ganesh Chaturthi Puja"
+          payload: "/select_ganesh_chaturthi_puja"
+        - title: "Satyanarayan Puja"
+          payload: "/select_satyanarayan_puja"
+        - title: "Maha Shivaratri Puja"
+          payload: "/select_maha_shivaratri_puja"
+        - title: "Navagraha Puja"
+          payload: "/select_navagraha_puja"
+        - title: "Saraswati Puja"
+          payload: "/select_saraswati_puja"
+        - title: "Kali Puja"
+          payload: "/select_kali_puja"
+        - title: "Chandi Puja"
+          payload: "/select_chandi_puja"
+        - title: "Pitru Paksha Puja"
+          payload: "/select_pitru_paksha_puja"
+
+
+  utter_personal_puja_selected:
+    - text: "Thank you for selecting Personal Puja. Please choose the specific puja you want:"
+      buttons:
+        - title: "Griha Pravesh Puja"
+          payload: "/select_griha_pravesh_puja"
+        - title: "Birthday Puja"
+          payload: "/select_birthday_puja"
+        - title: "Vivah Puja"
+          payload: "/select_vivah_puja"
+        - title: "Sankalp Puja"
+          payload: "/select_sankalp_puja"
+        - title: "Namkaran Puja"
+          payload: "/select_namkaran_puja"
+        - title: "Sundarkand Path"
+          payload: "/select_sundarkand_path"
+
+
+
+  utter_daily_puja_selected:
+    - text: "Thankyou for Selecting Daily Puja, Please select puja Name"
+      buttons:
+      - title: "Sandhya Vandana"
+        payload: "/select_sandhya_vandana"
+      - title: "Tulsi Puja"
+        payload: "/select_tulsi_puja"
+      - title: "Surya Namaskar"
+        payload: "/select_surya_namaskar"
+      - title: "Gayatri Mantra Japa"
+        payload: "/select_gayatri_mantra_japa"
+      - title: "Agnihotra"
+        payload: "/select_agnihotra"
+      - title: "Deva Darshan"
+        payload: "/select_deva_darshan"
+      - title: "Hanuman Chalisa"
+        payload: "/select_hanuman_chalisa"
+
+
+
+
+
+
+
+  utter_festival_puja_selected:
+  - text: "You have selected Festival Puja."
+
+
+
+
+  #  sepcial puja
+  utter_durga_puja_selected:
+  - text: "You have selected Durga Puja."
+
+  utter_lakshmi_puja_selected:
+  - text: "You have selected Lakshmi Puja."
+
+  utter_ganesh_chaturthi_puja_selected:
+  - text: "You have selected Ganesh Chaturthi Puja."
+
+  utter_satyanarayan_puja_selected:
+  - text: "You have selected Satyanarayan Puja."
+
+  utter_maha_shivaratri_puja_selected:
+  - text: "You have selected Maha Shivaratri Puja."
+
+  utter_navagraha_puja_selected:
+  - text: "You have selected Navagraha Puja."
+
+  utter_saraswati_puja_selected:
+  - text: "You have selected Saraswati Puja."
+
+  utter_kali_puja_selected:
+  - text: "You have selected Kali Puja."
+
+  utter_chandi_puja_selected:
+  - text: "You have selected Chandi Puja."
+
+  utter_pitru_paksha_puja_selected:
+  - text: "You have selected Pitru Paksha Puja."
+
+
+# daily puja
+
+  utter_sandhya_vandana_selected:
+  - text: "You have selected Sandhya Vandana. Please proceed with your choice."
+
+  utter_tulsi_puja_selected:
+  - text: "You have selected Tulsi Puja. Please proceed with your choice."
+
+  utter_surya_namaskar_selected:
+  - text: "You have selected Surya Namaskar. Please proceed with your choice."
+
+  utter_gayatri_mantra_japa_selected:
+  - text: "You have selected Gayatri Mantra Japa. Please proceed with your choice."
+
+  utter_agnihotra_selected:
+  - text: "You have selected Agnihotra. Please proceed with your choice."
+
+  utter_deva_darshan_selected:
+  - text: "You have selected Deva Darshan. Please proceed with your choice."
+
+  utter_hanuman_chalisa_selected:
+  - text: "You have selected Hanuman Chalisa. Please proceed with your choice."
+
+
+# personal puja
+
+  utter_griha_pravesh_puja_selected:
+  - text: "You have selected Griha Pravesh Puja. Please proceed with your choice."
+
+  utter_birthday_puja_selected:
+  - text: "You have selected Birthday Puja. Please proceed with your choice."
+
+  utter_vivah_puja_selected:
+  - text: "You have selected Vivah Puja. Please proceed with your choice."
+
+  utter_sankalp_puja_selected:
+  - text: "You have selected Sankalp Puja. Please proceed with your choice."
+
+  utter_namkaran_puja_selected:
+  - text: "You have selected Namkaran Puja. Please proceed with your choice."
+
+  utter_sundarkand_path_selected:
+  - text: "You have selected Sundarkand Path. Please proceed with your choice."
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - utter_greet
+  - utter_greets
+  - action_provide_puja_details
+  - action_provide_special_puja_details
+  - action_provide_daily_puja_details
+  - action_provide_personal_puja_details
+
+
+
+#   runing step
+# cmd 1
+# .\venv\Scripts\activate
+# cd .\PujaChatbot\  
+# rasa run --cros "*"  --enable-api
+
+
+# cmd 2
+# .\venv\Scripts\activate
+#  cd .\PujaChatbot\ 
+#  rasa run actions

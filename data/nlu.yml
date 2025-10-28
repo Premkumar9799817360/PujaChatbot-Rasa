@@ -1,0 +1,632 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+
+- intent: greets
+  examples: |
+    - first line 
+    - invitation
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+# Unwanted Question 
+- intent: unknown
+  examples: |
+    - 123
+    - ^&*&%*&^
+    - random text
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+    - 3
+    - What's the weather like today?
+    - Can you play music for me?
+    - What time is it in New York?
+    - What's the capital of France?
+    - Can you tell me a joke?
+    - How many continents are there?
+    - What is the meaning of life?
+    - Can you translate this for me?
+    - What's the latest news?
+    - What's the stock market doing today?
+    - Can you recommend a movie?
+    - Who invented the light bulb?
+    - Can you help me with my homework?
+    - How far is the moon?
+    - Can you find me a job?
+    - How do you make a pizza?
+    - What's the population of China?
+    - Who painted the Mona Lisa?
+    - What's the best way to learn a language?
+    - Can you lend me some money?
+    - How do you start a business?
+    - What's the fastest car in the world?
+    - How do you cook spaghetti?
+    - What's the tallest building in the world?
+    - Can you give me directions to the beach?
+    - How do you write a resume?
+    - Can you solve this math problem?
+    - What's the most popular book?
+    - How do you fix a computer?
+    - What's the best smartphone?
+    - How do you meditate?
+    - What's the most visited website?
+    - What's the price of Bitcoin?
+    - How do you invest in stocks?
+    - ¿Cuál es la capital de España?
+    - 42 is the answer to what?
+    - What does "Lorem ipsum" mean?
+    - 😃 Can you understand emojis?
+    - How do I get to the nearest ATM?
+    - @ What is your email address?
+    - Can you *bold* text?
+    - How do you use #hashtags?
+    - Is $5 a good?
+    - What does % mean?
+    - How do you find π?
+    - Can you help with HTML & CSS?
+    - What is C++ used for?
+    - Where is the shift key on a keyboard?
+    - Can you do @mentions?
+    - What is the use of & symbol?
+    - Can you write "Hello, World!" in different languages?
+    - How to make a newline \n in a string?
+    - What is the meaning of ~?
+    - Explain the use of ^ caret.
+    - How do you escape characters in JSON?
+    - What is the | (pipe) symbol used for?
+    - Can you find <  on a keyboard?
+    - add 3 and 7
+    - 4364+ 545
+    - rohan
+    - prem
+    
+- intent: puja_services
+  examples: |
+    - puja
+    - worship
+    - ritual
+    - ceremony
+    - offering
+    - prayer
+    - veneration
+    - devotion
+    - homeage
+    - adoration
+    - service
+    - I need a puja service
+    - Can you arrange a worship ceremony?
+    - I'm looking for a ritual service
+    - I want to perform a puja
+    - How do I book a ceremony for worship?
+    - Please help me with a veneration ceremony
+    - I am interested in booking a devotional service
+    - Can you organize a puja for me?
+    - I need help with a prayer ceremony
+    - I'd like to arrange a ritualistic puja
+    - Can you guide me in offering a puja?
+    - How can I set up a devotion service?
+    - I want to perform an offering ceremony
+    - Help me schedule a veneration ritual
+    - Can I book a prayer service with you?
+    - I would like to perform a homage ritual
+    - I'm looking to arrange a service of adoration
+    - I want to organize a spiritual ceremony
+    - Can you provide a worship service?
+    - How do I arrange for a puja at my home?
+    - I need assistance with a prayer offering
+    - Can you help me with a service for devotion?
+    - Please arrange a puja for me
+
+# puja Categories
+- intent: select_special_puja
+  examples: |
+    - I want to do a special puja
+    - Special Puja
+
+- intent: select_personal_puja
+  examples: |
+    - I want to do a personal puja
+    - Personal Puja
+
+- intent: select_daily_puja
+  examples: |
+    - I want to do a daily puja
+    - Daily Puja
+
+- intent: select_festival_puja
+  examples: |
+    - I want to do a festival puja
+    - Festival Puja
+
+
+#  special puja
+- intent: select_durga_puja
+  examples: |
+    - I want to do Durga Puja
+    - Durga Puja
+
+- intent: select_lakshmi_puja
+  examples: |
+    - I want to do Lakshmi Puja
+    - Lakshmi Puja
+
+- intent: select_ganesh_chaturthi_puja
+  examples: |
+    - I want to do Ganesh Chaturthi Puja
+    - Ganesh Chaturthi Puja
+
+- intent: select_satyanarayan_puja
+  examples: |
+    - I want to do Satyanarayan Puja
+    - Satyanarayan Puja
+
+- intent: select_maha_shivaratri_puja
+  examples: |
+    - I want to do Maha Shivaratri Puja
+    - Maha Shivaratri Puja
+
+- intent: select_navagraha_puja
+  examples: |
+    - I want to do Navagraha Puja
+    - Navagraha Puja
+
+- intent: select_saraswati_puja
+  examples: |
+    - I want to do Saraswati Puja
+    - Saraswati Puja
+
+- intent: select_kali_puja
+  examples: |
+    - I want to do Kali Puja
+    - Kali Puja
+
+- intent: select_chandi_puja
+  examples: |
+    - I want to do Chandi Puja
+    - Chandi Puja
+
+- intent: select_pitru_paksha_puja
+  examples: |
+    - I want to do Pitru Paksha Puja
+    - Pitru Paksha Puja
+
+
+
+# daily puja
+- intent: select_sandhya_vandana
+  examples: |
+    - Sandhya Vandana
+    - I want to select Sandhya Vandana
+    - Let's do Sandhya Vandana
+      
+- intent: select_tulsi_puja
+  examples: |
+    - Tulsi Puja
+    - I want to do Tulsi Puja
+    - Let's go with Tulsi Puja
+
+- intent: select_surya_namaskar
+  examples: |
+    - Surya Namaskar
+    - I want to select Surya Namaskar
+    - Let's do Surya Namaskar
+
+- intent: select_gayatri_mantra_japa
+  examples: |
+    - Gayatri Mantra Japa
+    - I want to do Gayatri Mantra Japa
+    - Let's do Gayatri Mantra Japa
+
+- intent: select_agnihotra
+  examples: |
+    - Agnihotra
+    - I want to do Agnihotra
+    - Let's go with Agnihotra
+
+- intent: select_deva_darshan
+  examples: |
+    - Deva Darshan
+    - I want to select Deva Darshan
+    - Let's do Deva Darshan
+
+- intent: select_hanuman_chalisa
+  examples: |
+    - Hanuman Chalisa
+    - I want to do Hanuman Chalisa
+    - Let's do Hanuman Chalisa
+
+
+# personal Puja
+- intent: select_griha_pravesh_puja
+  examples: |
+    - I want to perform Griha Pravesh Puja
+    - Select Griha Pravesh Puja
+    - Griha Pravesh Puja please
+    - I choose Griha Pravesh Puja
+
+- intent: select_birthday_puja
+  examples: |
+    - I want to perform Birthday Puja
+    - Select Birthday Puja
+    - Birthday Puja please
+    - I choose Birthday Puja
+
+- intent: select_vivah_puja
+  examples: |
+    - I want to perform Vivah Puja
+    - Select Vivah Puja
+    - Vivah Puja please
+    - I choose Vivah Puja
+
+- intent: select_sankalp_puja
+  examples: |
+    - I want to perform Sankalp Puja
+    - Select Sankalp Puja
+    - Sankalp Puja please
+    - I choose Sankalp Puja
+
+- intent: select_namkaran_puja
+  examples: |
+    - I want to perform Namkaran Puja
+    - Select Namkaran Puja
+    - Namkaran Puja please
+    - I choose Namkaran Puja
+
+- intent: select_sundarkand_path
+  examples: |
+    - I want to perform Sundarkand Path
+    - Select Sundarkand Path
+    - Sundarkand Path please
+    - I choose Sundarkand Path
+
+
+# festval puja
+- intent: select_makar_sankranti
+  examples: |
+    - I want to perform Makar Sankranti puja
+    - Makar Sankranti puja
+     - Select Makar Sankranti puja
+    - Let's do Makar Sankranti puja
+
+- intent: select_maha_shivaratri
+  examples: |
+    - I want to perform Maha Shivaratri puja
+    - Maha Shivaratri puja
+    - Select Maha Shivaratri puja
+    - Let's do Maha Shivaratri puja
+
+- intent: select_holi_dahan
+  examples: |
+    - I want to perform Holi Dahan puja
+    - Holi Dahan puja
+    - Select Holi Dahan puja
+    - Let's do Holi Dahan puja
+
+- intent: select_ram_navami
+  examples: |
+    - I want to perform Ram Navami puja
+    - Ram Navami puja
+    - Select Ram Navami puja
+    - Let's do Ram Navami puja
+
+- intent: select_raksha_bandhan
+  examples: |
+    - I want to perform Raksha Bandhan puja
+    - Raksha Bandhan puja
+    - Select Raksha Bandhan puja
+    - Let's do Raksha Bandhan puja
+
+- intent: select_krishna_janmashtami
+  examples: |
+    - I want to perform Krishna Janmashtami puja
+    - Krishna Janmashtami puja
+    - Select Krishna Janmashtami puja
+    - Let's do Krishna Janmashtami puja
+
+- intent: select_ganesha_chaturthi
+  examples: |
+    - I want to perform Ganesha Chaturthi puja
+    - Ganesha Chaturthi puja
+    - Select Ganesha Chaturthi puja
+    - Let's do Ganesha Chaturthi puja
+
+- intent: select_navratri
+  examples: |
+    - I want to perform Navratri puja
+    - Navratri puja
+    - Select Navratri puja
+    - Let's do Navratri puja
+
+- intent: select_karwa_chauth
+  examples: |
+    - I want to perform Karwa Chauth puja
+    - Karwa Chauth puja
+    - Select Karwa Chauth puja
+    - Let's do Karwa Chauth puja
+
+- intent: select_dhanteras
+  examples: |
+    - I want to perform Dhanteras puja
+    - Dhanteras puja
+    - Select Dhanteras puja
+    - Let's do Dhanteras puja
+
+- intent: select_diwali
+  examples: |
+    - I want to perform Diwali puja
+    - Diwali puja
+    - Select Diwali puja
+    - Let's do Diwali puja
+
+# other festival puja these puja are not included in option
+
+- intent: ask_basant_panchami
+  examples: |
+    - What is Basant Panchami?
+    - What happens on Basant Panchami?
+    - Explain Basant Panchami.
+    - Tell me about the Basant Panchami festival.
+    - Why do we celebrate Basant Panchami?
+    - What do people do on Basant Panchami?
+    - When is Basant Panchami celebrated?
+    - How is Basant Panchami celebrated?
+    - Describe Basant Panchami.
+    - What does Basant Panchami signify?
+    - basant panchami
+    - pandhami
+    - basant
+
+
+- intent: ask_gangaur
+  examples: |
+    - What is Gangaur?
+    - What do people do on Gangaur?
+    - Explain Gangaur to me.
+    - When is Gangaur celebrated?
+    - Why do we celebrate Gangaur?
+    - How do people celebrate Gangaur?
+    - What is the significance of Gangaur?
+    - Describe Gangaur.
+    - Why is Gangaur important?
+    - What happens during Gangaur?
+    - gangaur puja
+    - Gangaur
+
+- intent: ask_hanuman_jayanti
+  examples: |
+    - What is Hanuman Jayanti?
+    - Tell me about Hanuman Jayanti.
+    - Explain Hanuman Jayanti to me.
+    - Why is Hanuman Jayanti celebrated?
+    - What happens on Hanuman Jayanti?
+    - When is Hanuman Jayanti?
+    - How do people celebrate Hanuman Jayanti?
+    - What's special about Hanuman Jayanti?
+    - Why do Hindus celebrate Hanuman Jayanti?
+    - Describe Hanuman Jayanti.
+    - hanuman
+    - hanuman jayanti
+
+- intent: ask_nag_panchami
+  examples: |
+    - What is Nag Panchami?
+    - Tell me about Nag Panchami.
+    - Explain Nag Panchami to me.
+    - Why is Nag Panchami celebrated?
+    - What happens on Nag Panchami?
+    - When is Nag Panchami?
+    - How do people celebrate Nag Panchami?
+    - What's special about Nag Panchami?
+    - Why do Hindus celebrate Nag Panchami?
+    - Describe Nag Panchami.
+    - nag panchami
+
+
+- intent: ask_vishwakarma_puja
+  examples: |
+    - What is Vishwakarma Puja?
+    - Tell me about Vishwakarma Puja.
+    - Explain Vishwakarma Puja to me.
+    - Why is Vishwakarma Puja celebrated?
+    - What happens on Vishwakarma Puja?
+    - When is Vishwakarma Puja?
+    - How do people celebrate Vishwakarma Puja?
+    - What's special about Vishwakarma Puja?
+    - Why do Hindus celebrate Vishwakarma Puja?
+    - Describe Vishwakarma Puja.
+    - vishwakarma puja
+    - vishwakarma
+
+- intent: ask_govardhan
+  examples: |
+    - What is Govardhan?
+    - Tell me about Govardhan.
+    - Explain Govardhan to me.
+    - Why is Govardhan celebrated?
+    - What happens on Govardhan?
+    - When is Govardhan celebrated?
+    - How do people celebrate Govardhan?
+    - What's special about Govardhan?
+    - Why do Hindus celebrate Govardhan?
+    - Describe Govardhan.
+    - goverdhan puja
+    - goverdhan 
+
+- intent: ask_tulsi_vivah
+  examples: |
+    - What is Tulsi Vivah?
+    - Tell me about Tulsi Vivah.
+    - Explain Tulsi Vivah to me.
+    - Why is Tulsi Vivah celebrated?
+    - What happens during Tulsi Vivah?
+    - When is Tulsi Vivah?
+    - How do people celebrate Tulsi Vivah?
+    - What's special about Tulsi Vivah?
+    - Why do Hindus celebrate Tulsi Vivah?
+    - Describe Tulsi Vivah.
+    - tulsi puja
+    - tulsi vivah
+
+
+#puja samgri code
+- intent: puja_samgri_list
+  examples: |
+    - I want to buy puja samgri
+    - buy now puja samgri
+    - brought puja samgri
+    - Where can I buy puja samgri
+    - How to order puja samgri
+    - Best puja samgri
+
+
+# - intent: Puja_items_details
+#   examples: |
+#     - show puja items detailas
+#     - puja itmes
+
+# - intent: Puja_status_details
+#   examples: |
+#     - show puja status detailas
+#     - puja status
+
+
+# - intent: Puja_ornaments_details
+#   examples: |
+#     - show puja ornaments detailas
+#     - puja ornaments
+
+
+# - intent: Puja_cloths_details
+#   examples: |
+#     - show puja cloths detailas
+#     - puja cloths
+
+
+- intent: Puja_items_details
+  examples: |
+    - show puja items details
+    - puja items
+    - What items are used in puja?
+    - Can you tell me about puja items?
+    - List all puja samagri
+
+- intent: Puja_status_details
+  examples: |
+    - show puja status details
+    - puja status
+    - How is the puja progressing?
+    - What is the status of the puja?
+    - Tell me the current puja status
+
+- intent: Puja_ornaments_details
+  examples: |
+    - show puja ornaments details
+    - puja ornaments
+    - List all puja ornaments
+    - What ornaments are used in puja?
+    - Can you give details about puja ornaments?
+
+- intent: Puja_cloths_details
+  examples: |
+    - show puja cloths details
+    - puja cloths
+    - What clothes are worn during puja?
+    - List the traditional puja cloths
+    - Give me details about puja cloths
+
+- intent: contact_details
+  examples: |
+    - contact
+    - how can i contact you
+    - number
+    - address
+    - contact details

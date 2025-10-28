@@ -1,0 +1,405 @@
+version: "3.1"
+
+intents:
+  - greet
+  - greets
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - unknown
+  - puja_services
+
+# rasa run --cors "*" --enable-api
+  
+  # puja categories
+  - select_special_puja
+  - select_personal_puja
+  - select_daily_puja
+  - select_festival_puja
+
+  # special categories
+  - select_durga_puja
+  - select_lakshmi_puja
+  - select_ganesh_chaturthi_puja
+  - select_satyanarayan_puja
+  - select_maha_shivaratri_puja
+  - select_navagraha_puja
+  - select_saraswati_puja
+  - select_kali_puja
+  - select_chandi_puja
+  - select_pitru_paksha_puja
+
+  # daily Puja Categories
+  - select_sandhya_vandana
+  - select_tulsi_puja
+  - select_surya_namaskar
+  - select_gayatri_mantra_japa
+  - select_agnihotra
+  - select_deva_darshan
+  - select_hanuman_chalisa
+
+  # personal puja
+  - select_griha_pravesh_puja
+  - select_birthday_puja
+  - select_vivah_puja
+  - select_sankalp_puja
+  - select_namkaran_puja
+  - select_sundarkand_path
+
+
+# festival puja
+  - select_makar_sankranti
+  - select_maha_shivaratri
+  - select_holi_dahan
+  - select_ram_navami
+  - select_raksha_bandhan
+  - select_krishna_janmashtami
+  - select_ganesha_chaturthi
+  - select_navratri
+  - select_karwa_chauth
+  - select_dhanteras
+  - select_diwali
+
+# other festival puja these puja are not included in option
+  - ask_basant_panchami
+  - ask_gangaur
+  - ask_hanuman_jayanti
+  - ask_nag_panchami
+  - ask_vishwakarma_puja
+  - ask_govardhan
+  - ask_tulsi_vivah
+
+
+# puja samgri
+  - puja_samgri_list
+  - contact_details
+  - Puja_items_details
+  - Puja_status_details
+  - Puja_ornaments_details
+  - Puja_cloths_details
+  
+  # - Puja_items_details
+  # - Puja_status_details
+  # - Puja_ornaments_details
+  # - Puja_cloths_details
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_greets:
+  - text: 👋 Welcome to our Online Puja Store! 🌐
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by K2K IT Support and Solutions Pvt.Ltd.[Click](https://k2k-it-ai.solutions/)"
+
+  utter_unknown:
+  - text: "Sorry, I don't understand that. Could you please ask a different question?"
+
+  utter_puja_option:
+    - text: "Hello! Welcome to our online puja store. Please select your suitable option:"
+      buttons:
+        - title: "Special Puja"
+          payload: "/select_special_puja"
+        - title: "Personal Puja"
+          payload: "/select_personal_puja"
+        - title: "Daily Puja"
+          payload: "/select_daily_puja"
+        - title: "Festivals"
+          payload: "/select_festival_puja"
+        - title: "Puja Samagari"
+          payload: "/puja_samgri_list"
+
+
+  utter_special_puja_selected:
+    - text: "Thankyou for selecting special puja, Please choose the specific puja you want:"
+      buttons:
+        - title: "Durga Puja🪔"
+          payload: "/select_durga_puja"
+        - title: "Lakshmi Puja💰"
+          payload: "/select_lakshmi_puja"
+        - title: "Ganesh Chaturthi Puja🐘🌺"
+          payload: "/select_ganesh_chaturthi_puja"
+        - title: "Satyanarayan Puja📿🛕"
+          payload: "/select_satyanarayan_puja"
+        - title: "Maha Shivaratri Puja🕉️🔱"
+          payload: "/select_maha_shivaratri_puja"
+        - title: "Navagraha Puja✨🌞"
+          payload: "/select_navagraha_puja"
+        - title: "Saraswati Puja📚✨"
+          payload: "/select_saraswati_puja"
+        - title: "Kali Puja🔮🕉️"
+          payload: "/select_kali_puja"
+        - title: "Chandi Puja🪔"
+          payload: "/select_chandi_puja"
+        - title: "Pitru Paksha Puja🕯️🙏"
+          payload: "/select_pitru_paksha_puja"
+
+
+  utter_personal_puja_selected:
+    - text: "Thank you for selecting Personal Puja. Please choose the specific puja you want:"
+      buttons:
+        - title: "Griha Pravesh Puja🏠✨"
+          payload: "/select_griha_pravesh_puja"
+        - title: "Birthday Puja🎂🎉"
+          payload: "/select_birthday_puja"
+        - title: "Vivah Puja💍❤️"
+          payload: "/select_vivah_puja"
+        - title: "Sankalp Puja🙏🕉️"
+          payload: "/select_sankalp_puja"
+        - title: "Namkaran Puja👶🪔"
+          payload: "/select_namkaran_puja"
+        - title: "Sundarkand Path📖🌟"
+          payload: "/select_sundarkand_path"
+
+
+
+  utter_daily_puja_selected:
+    - text: "Thankyou for Selecting Daily Puja, Please choose the specific puja you want:"
+      buttons:
+        - title: "Sandhya Vandana🌅"
+          payload: "/select_sandhya_vandana"
+        - title: "Tulsi Puja🌿"
+          payload: "/select_tulsi_puja"
+        - title: "Surya Namaskar 🌞"
+          payload: "/select_surya_namaskar"
+        - title: "Gayatri Mantra Japa🕉️"
+          payload: "/select_gayatri_mantra_japa"
+        - title: "Agnihotra 🔥"
+          payload: "/select_agnihotra"
+        - title: "Deva Darshan 🙏"
+          payload: "/select_deva_darshan"
+        - title: "Hanuman Chalisa🐒"
+          payload: "/select_hanuman_chalisa"
+
+
+
+  utter_festival_puja_selected:
+    - text: "Thank you for selecting a Festival Puja. Please select the puja you want:"
+      buttons:
+        - title: "Makar Sankranti🪁"
+          payload: "/select_makar_sankranti"
+        - title: "Maha Shivaratri🕉️"
+          payload: "/select_maha_shivaratri"
+        - title: "Holi Dahan🔥"
+          payload: "/select_holi_dahan"
+        - title: "Ram Navami🏹"
+          payload: "/select_ram_navami"
+        - title: "Raksha Bandhan🎀"
+          payload: "/select_raksha_bandhan"
+        - title: "Dhanteras🪙"
+          payload: "/select_dhanteras"
+        - title: "Diwali🪔"
+          payload: "/select_diwali"
+        - title: "Krishna Janmashtami🏺"
+          payload: "/select_krishna_janmashtami"
+        - title: "Navratri💃"
+          payload: "/select_navratri"
+        - title: "Ganesha Chaturthi 🐘"
+          payload: "/select_ganesha_chaturthi"
+        - title: "Karwa Chauth🌙"
+          payload: "/select_karwa_chauth"
+
+
+
+
+
+  #  sepcial puja
+  utter_durga_puja_selected:
+  - text: "Durga Puja is one of the biggest festivals for Hindus 🎉 where they worship goddess Durga 🪔 who is very strong 💪. Good defeating evil ⚔️ is what this celebration stands for in addition to putting up temporary structures known as Pandals 🏰, idol worshipping 🙏 and sharing meals 🍽️ in a group setting 👫👬."
+
+  utter_lakshmi_puja_selected:
+  - text: "Lakshmi 🌟 who represents abundance 🌺 and prosperity 💰 is one among many gods 🙏 we shall be paying homage 🙌 to on this occasion by bringing wealth 💸 or materials 🎁 mostly flouring 🌾; flowers 🌼, sweets 🍬, and lamps 🕯️ too among others hence all these offerings made unto her or her shrines 🏛️."
+
+  utter_ganesh_chaturthi_puja_selected:
+  - text: "The elephant-headed god Ganesha 🐘 is honored during his festival 🎊 celebrated mostly during the first ten days 📅 of Bhadrapad month 📚 according to the Hindu calendar 🗓️ which occurs between August 🌞 and September 🍁 every year except for leap years 🌟."
+
+  utter_satyanarayan_puja_selected:
+  - text: "The Lord Vishnu puja, also known as Satyanarayana, implies the true embodiment of truth in reality. 🌟 Generally, this holy act tends to be performed when the need for health 💪, property 🏡, and prosperity 🌿 increases. As such during this stage prayers 🙏 are said while songs 🎵 are sung besides providing foodstuff 🥥 that results from plants 🌱 then decorated with flowers 🌸."
+
+  utter_maha_shivaratri_puja_selected:
+  - text: "This night is devoted to Lord Shiva for his spiritual rejuvenation purposes only 🌜. Those who believe in him should keep fasts throughout the night 🛌, vigil all night long 🌟, pray 🕯️, and also do Abhishek on the lingam 💧 which symbolizes Shiva 🕉️."
+
+  utter_navagraha_puja_selected:
+  - text: "This is a special kind of Hindu worship performed by priests to appease the nine celestial bodies or Navgraha 🔮🌠🌟 and seek their blessings for health 🌱, wealth 💵, and prosperity 🏅✨🌸."
+
+  utter_saraswati_puja_selected:
+  - text: "This puja is performed to seek blessings for education 🏫 and creativity 🎨 and it is dedicated to Goddess Saraswati 🌺 who is also known as the Goddess of Knowledge 📚, Music 🎹, and Arts 🎨. Students are seen offering books 📚 and musical instruments 🎻 to the goddess."
+
+  utter_kali_puja_selected:
+  - text: "This puja, which is celebrated in honor of Goddess Kali – a fierce form of Shakti – is related to damaging evil forces 🩸💀🔥. Rituals that involve a great deal of animal sacrifices 🐏🪓 and other forms 💫🔮 are done on this day depending on the culture 🌍🕉️."
+
+  utter_chandi_puja_selected:
+  - text: "Chandi Puja is for worshipping Goddess Chandi 💫; another form that appears fierce as Shakti ⚡ does. The Chandi mantra recitation takes place along with various offerings 🌹🪔 given out to the goddess 🧘."
+
+  utter_pitru_paksha_puja_selected:
+  - text: "In this period, people should honor their ancestors; Hindus observed these rituals whereby food 🥘 and water 🌊 are provided therein for them by Hindus 🌾🍃🌻 into whom they were born recently as such. 🪴🕉️🙏🪔"
+
+
+# daily puja
+
+  utter_sandhya_vandana_selected:
+  - text: "Sandhya Vandana refers to the recitation of prayers that an individual must do every day during early morning 🌅 and evening 🌇, aligning oneself with the divine energies ✨ of these transitional times."
+  utter_tulsi_puja_selected:
+  - text: "Worshipping the Tulsi (Holy Basil) 🌿 plant is called Tulsi Puja in Hinduism as it has both medicinal 💊 and spiritual importance 🙏."
+
+  utter_surya_namaskar_selected:
+  - text: "Surya Namaskar is a set of postures 🧘 used together with prayers offered to the Sun God ☀️, showing gratitude and admiration."
+
+  utter_gayatri_mantra_japa_selected:
+  - text: "As Gayatri Mantra Japa consists of repeating the Gayatri Mantra—one of the most potent prayers 📿🕉️ in Vedic scriptures 📜 meant for invoking divine wisdom 🧘‍♂️✨ and enlightenment 🔆🌟🙏"
+
+  utter_agnihotra_selected:
+  - text: "This is a rite performed each day at 🌅 dawn and 🌆 dusk in which oblations are offered into the 🔥 fire to purify oneself and the surroundings 🌿🕊️🙏🪔✨"
+
+  utter_deva_darshan_selected:
+  - text: "It means 🙏 going to a 🛕 temple or 🏠 home shrine where people 🙇‍♀️ pray and get 🙌 blessings from their 🕉️ gods."
+
+  utter_hanuman_chalisa_selected:
+  - text: "This means 📖 reading or chanting 🎶 Hanuman Chalisa which is a 🙏 devotional prayer dedicated to Lord Hanuman 🐒 requesting protection 🛡️ and strength 💪"
+
+
+# personal puja
+
+  utter_griha_pravesh_puja_selected:
+  - text: "A practice offered when someone moves into a new house 🏡🏠 that involves myths 🔔🕯️ that protect new residents 🛡️✨  and allow for prosperity💰🌟."
+
+  utter_birthday_puja_selected:
+  - text: "This means special prayers 🎂🙏 offered by someone during their birthdays 🎉🎁 which ask for good health🌿💪, joyfulness 😄🌟, and achievements from God’s side for the following year.🎯🏆"
+
+  utter_vivah_puja_selected:
+  - text: "It is special rites that couples 👰🤵 are given during marriage ceremonies 💍🎉 to help them have a good marriage life ❤️👩‍❤️‍👨 full of love 🌹🙏."
+
+  utter_sankalp_puja_selected:
+  - text: "Sankalpa Puja, a significant Hindu custom 🕉️✨, indicates a desired intention or determination 🎯🙏. It lays the foundation for spiritual goals 🛕🌿 and receives divine help 🙌🌟 along with approval to reach them successfully 🕊️🚀."
+
+  utter_namkaran_puja_selected:
+  - text: "This is received by a baby 👶🎀 through various ceremonies meant to 🧿🕊️ him/her, and wish for a long life 🎂🎈 and good health🍀🌼"
+
+  utter_sundarkand_path_selected:
+  - text: "The path taken in Sundarkand which forms one chapter of Ramayana 📜🌿 creates strength 🏋️‍♂️💪 in our homes 🏠 and offers us peace☮️🕊️"
+
+
+# festival puja
+  utter_makar_sankranti_selected:
+  - text: "Makar Sankranti is a celebration where people worship the Sun god (Surya)☀️🙏, give thanks to nature 🌾🌻 for providing them with bountiful harvests, and homage to Sun God Surya🙏🛕."
+  utter_maha_shivaratri_selected:
+  - text: "Maha Shivaratri is this sacred Hindu celebration that stands in honor of Lord Shiva  🕉️🙏 and symbolizes light’s triumph over dark and ignorance. 🔥🌙 "
+  utter_holi_dahan_selected:
+  - text: "Also recognized as the festival of colors 🌈🎨 , Holi Dahan is among the popular festivals observed throughout India passionately🔥🕺💃  . People light huge bonfires called Holika on the eve of Holi after singing and dancing around them. "
+  utter_ram_navami_selected:
+  - text: "Ram Navami is celebrated as it marked the descent of God Rama 🙏🛕 to earth to liberate the universe from evil  🌟💥."
+  utter_raksha_bandhan_selected:
+  - text: "The festival of Raksha Bandhan is celebrated to cherish the bond between brothers and sisters  💖👫. It is usually a day filled with joy, and it is marked by sisters tying a sacred thread called Rakhi 🎀✨ on their brothers’ wrists that signifies their love for them and also how they will stay connected for life."
+  utter_krishna_janmashtami_selected:
+  - text: "Krishna Janmashtami, or Gokulashtami, is a major Hindu festival commemorating the birth of Lord Krishna 🎉🛕  who is the chief god of Hinduism. The whole nation is involved in this event rejoicing joyfully 🕺💃 while all Hindus across the globe do too 🌍🎊."
+  utter_ganesha_chaturthi_selected:
+  - text: "Ganesha Chaturthi, also known as Vinayaka Chaturthi 🐘🛕, is a revered Hindu festival that celebrates the birth of Lord Ganesha, the elephant-headed deity of wisdom, prosperity, and removal of obstacles. 🎉🙏🌟."
+  utter_navratri_selected:
+  - text: "Navratri, meaning 'nine nights, 🌙✨' is a vibrant Hindu festival celebrated with immense fervor and devotion across India  🕉️🌸. It commemorates the victory of good over evil and honors the divine feminine energy, manifesting in the form of Goddess Durga and her various incarnations 🙏🛕."
+  utter_karwa_chauth_selected:
+  - text: "Karwa Chauth is a traditional Hindu festival celebrated by married women  🙏💍 with great devotion and enthusiasm. It is observed to pray for the long life, prosperity, and well-being of their husbands. This day holds immense significance in Hindu culture and is marked by fasting, prayers, and rituals.💖🛕"
+  utter_dhanteras_selected:
+  - text: "Dhanteras, also known as Dhanatrayodashi 💰✨, is a significant Hindu festival celebrated two days before Diwali 🪔🎉. It marks the beginning of the five-day Diwali festival and holds immense importance for Hindus, especially for wealth and prosperity🌟🙏."
+  utter_diwali_selected:
+  - text: "Diwali, also known as Deepavali 🪔🎆, is one of the most significant Hindu festivals celebrated with immense enthusiasm and joy 🕯️✨ across India and by Hindu communities around the world. It symbolizes the victory of light over darkness, knowledge over ignorance, and good over evil🌟🎉"
+
+
+# other festival puja these puja are not included in option
+
+  utter_basant_panchami:
+  - text: "Basant Panchami is one of the prominent Hindu festivals that is dedicated to the Goddess of knowledge, music, and arts 🎨🎶🙏 - Goddess Saraswati 🌼🌸 is known as the festival of spring or the moment when spring comes🌷🌻🌼. "
+
+  utter_gangaur:
+  - text: "The term ‘Gangaur’ can be traced back to Lord Shiva’s 🕉️🙏 name ‘Gan’ while another explanation points to Goddess Gauri’s 🌸🌼 name or another form of her by that name (Parvati). "
+
+  utter_hanuman_jayanti:
+  - text: "Hanuman Jayanti is an important Hindu festival that commemorates the birth of Lord 🙏🦁 Hanuman, the devoted disciple of Lord Rama 🛕✨. It is celebrated by millions of devotees all over India and throughout different regions around the world."
+
+  utter_nag_panchami:
+  - text: "Nag Panchami is a traditional Hindu feast day that is about serpent worship  🐍🙏. It is most sacred in the places where Snake worship is embraced, such as India’s Hindus. During snake worship, devotees offer prayers and milk 🥛🌸 to snake idols placed in anthills or under trees where they live. Special rituals involve reciting mantras and offering milk, water, and flowers as an act of honoring snakes. "
+
+  utter_vishwakarma_puja:
+  - text: "Vishwakarma Puja is a festival that forms part of Hindu religion whereby respect is given to Lord Vishwakarma 🛠️🏗️ who is believed to be the architect and craftsman of the gods 🛕🙏. "
+
+  utter_govardhan:
+  - text: "Govardhan Puja, also known as Annakut or Annakoot 🛕🍲, is a Hindu festival celebrated the day after Diwali, marking the triumph of Lord Krishna over Indra 🌧️💥, the god of rain and thunderstorms. It holds great significance in Hindu mythology and is observed with devotion and enthusiasm, particularly in North India.🙏🎉"
+
+  utter_tulsi_vivah:
+  - text: "Tulsi Vivah, also known as Tulsi Wedding, is a sacred Hindu festival celebrated to commemorate the ceremonial marriage 💐🌸 of the Tulsi plant (holy basil)  🌿🙏to Lord Vishnu or his avatar Lord Krishna. It marks the beginning of the Hindu wedding season and is observed with great reverence and devotion.🛕✨"
+
+
+
+# contact
+  utter_contact_details:
+  - text: "Get in touch with us through your preferred option! 📞💬✉️\n
+            - Email✉️: [info@k2kitsupport.com](mailto:2020pgiadprem09@gmail.com) \n
+            - Phone Number📱: [9799817360](https://wa.me/919799817360) \n
+            - Website🌐: [Click](https://k2k-it-ai.solutions/)"
+
+#puja samgris
+  # utter_puja_items_details:
+  # - text: "Our shop provides all the essential items needed to complete your Puja rituals 🛕 with divine energy ✨. From fragrant incense sticks 🌿 and aromatic camphor 🔥 to sacred lamps 🪔 and kumkum powder 🔴, we have everything you need to make your worship complete. You’ll find high-quality copper kalash 🏺, rudraksha malas 📿, and holy water 💧, ensuring that every aspect of your ceremony is sacred. Our shop also offers beautiful ghee diyas 🪔 and pure sandalwood paste 🪵, along with Puja bells 🔔 to add a touch of spirituality to your rituals.[Click For More](https://k2k-it-ai.solutions/)"
+
+  # utter_puja_status_details:
+  # - text: "Stay connected with every step of your Puja through our real-time status updates 🕔. Whether it's the preparation phase 🛕, rituals in progress 🔔, or the final aarti 🎶, we ensure that you are informed about the entire process. You’ll receive updates when offerings are made 🪔, blessings are received ✨, and prasad is ready 🍎. From chanting 📿 to deity decoration 🌸, and final prayers, our shop keeps you updated on all stages of your spiritual journey, ensuring a seamless and blessed experience 🙏.[Click For More](https://k2k-it-ai.solutions/)"
+
+
+  # utter_puja_ornaments_details:
+  # - text: "Adorn your deities with our stunning range of Puja ornaments ✨. From delicate flower garlands 🌺 and handcrafted bangles 💍 to jewel-studded earrings 💎 and sacred beads 📿, we provide everything you need to beautify your spiritual setting. Our shop offers golden crowns 👑, silver anklets 🔗, and divine bracelets 🧿, all crafted to bring elegance and grace to your rituals. With our selection of ornaments, your deities will be beautifully decorated, enhancing the sanctity of your Puja 🌸.[Click For More](https://k2k-it-ai.solutions/)"
+
+
+  # utter_puja_cloths_details:
+  # - text: "Dress your deities in the finest traditional Puja cloths 👗. Our collection includes silk sarees 🧵, embroidered shawls 🧣, and brocade dupattas 👗, perfect for adding a touch of grandeur to your rituals. We also offer colorful cotton dhotis 👖, velvet covers 🛏️, and sacred cloths 👘 that reflect the richness and tradition of spiritual ceremonies. Whether you need golden borders 🌟 or Bandhani stoles 🧣, our shop ensures that every Puja is celebrated with the finest attire, creating a divine and vibrant atmosphere 🌈.[Click For More](https://k2k-it-ai.solutions/)"
+
+
+  utter_puja_items_details:
+    - text: "Our shop provides all the essential items needed to complete your Puja rituals 🛕 with divine energy ✨. From fragrant incense sticks 🌿 and aromatic camphor 🔥 to sacred lamps 🪔 and kumkum powder 🔴, we have everything you need to make your worship complete. You’ll find high-quality copper kalash 🏺, rudraksha malas 📿, and holy water 💧, ensuring that every aspect of your ceremony is sacred. Our shop also offers beautiful ghee diyas 🪔 and pure sandalwood paste 🪵, along with Puja bells 🔔 to add a touch of spirituality to your rituals.[Click For More](https://k2k-it-ai.solutions/)"
+
+  utter_puja_status_details:
+    - text: "Stay connected with every step of your Puja through our real-time status updates 🕔. Whether it's the preparation phase 🛕, rituals in progress 🔔, or the final aarti 🎶, we ensure that you are informed about the entire process. You’ll receive updates when offerings are made 🪔, blessings are received ✨, and prasad is ready 🍎. From chanting 📿 to deity decoration 🌸, and final prayers, our shop keeps you updated on all stages of your spiritual journey, ensuring a seamless and blessed experience 🙏.[Click For More](https://k2k-it-ai.solutions/)"
+
+  utter_puja_ornaments_details:
+    - text: "Adorn your deities with our stunning range of Puja ornaments ✨. From delicate flower garlands 🌺 and handcrafted bangles 💍 to jewel-studded earrings 💎 and sacred beads 📿, we provide everything you need to beautify your spiritual setting. Our shop offers golden crowns 👑, silver anklets 🔗, and divine bracelets 🧿, all crafted to bring elegance and grace to your rituals. With our selection of ornaments, your deities will be beautifully decorated, enhancing the sanctity of your Puja 🌸.[Click For More](https://k2k-it-ai.solutions/)"
+
+  utter_puja_cloths_details:
+    - text: "Dress your deities in the finest traditional Puja cloths 👗. Our collection includes silk sarees 🧵, embroidered shawls 🧣, and brocade dupattas 👗, perfect for adding a touch of grandeur to your rituals. We also offer colorful cotton dhotis 👖, velvet covers 🛏️, and sacred cloths 👘 that reflect the richness and tradition of spiritual ceremonies. Whether you need golden borders 🌟 or Bandhani stoles 🧣, our shop ensures that every Puja is celebrated with the finest attire, creating a divine and vibrant atmosphere 🌈.[Click For More](https://k2k-it-ai.solutions/)"
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - utter_greet
+  - utter_greets
+  - action_provide_puja_details
+  - action_provide_special_puja_details
+  - action_provide_daily_puja_details
+  - action_provide_personal_puja_details
+  - action_provide_fesival_puja_details
+  - actions_puja_samgri_list
+  - utter_puja_items_details
+  - utter_puja_status_details
+  - utter_puja_ornaments_details
+  - utter_puja_cloths_details

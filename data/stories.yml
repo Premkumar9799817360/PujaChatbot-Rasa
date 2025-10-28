@@ -1,0 +1,363 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: welcome path
+  steps: 
+  - intent: greets
+  - action: utter_puja_option
+
+- story: unknown intent
+  steps:
+  - intent: unknown
+  - action: utter_unknown
+
+- story: unknown intent
+  steps:
+  - intent: puja_services
+  - action: utter_puja_option
+
+- story: User selects Special Puja
+  steps:
+  - intent: select_special_puja
+  - action: action_provide_puja_details
+
+- story: User selects Personal Puja
+  steps:
+  - intent: select_personal_puja
+  - action: action_provide_puja_details
+
+- story: User selects Daily Puja
+  steps:
+  - intent: select_daily_puja
+  - action: action_provide_puja_details
+
+- story: User selects Festival Puja
+  steps:
+  - intent: select_festival_puja
+  - action: action_provide_puja_details
+
+
+
+# special puja
+- story: User selects Durga Puja
+  steps:
+  - intent: select_durga_puja
+  - action: action_provide_special_puja_details
+
+- story: User selects Lakshmi Puja
+  steps:
+  - intent: select_lakshmi_puja
+  - action: action_provide_special_puja_details
+
+- story: User selects Ganesh Chaturthi Puja
+  steps:
+  - intent: select_ganesh_chaturthi_puja
+  - action: action_provide_special_puja_details
+
+- story: User selects Satyanarayan Puja
+  steps:
+  - intent: select_satyanarayan_puja
+  - action: action_provide_special_puja_details
+
+- story: User selects Maha Shivaratri Puja
+  steps:
+  - intent: select_maha_shivaratri_puja
+  - action: action_provide_special_puja_details
+
+- story: User selects Navagraha Puja
+  steps:
+  - intent: select_navagraha_puja
+  - action: action_provide_special_puja_details
+
+- story: User selects Saraswati Puja
+  steps:
+  - intent: select_saraswati_puja
+  - action: action_provide_special_puja_details
+
+- story: User selects Kali Puja
+  steps:
+  - intent: select_kali_puja
+  - action: action_provide_special_puja_details
+
+- story: User selects Chandi Puja
+  steps:
+  - intent: select_chandi_puja
+  - action: action_provide_special_puja_details
+
+- story: User selects Pitru Paksha Puja
+  steps:
+  - intent: select_pitru_paksha_puja
+  - action: action_provide_special_puja_details
+
+
+
+  # daily puja
+- story: Select Sandhya Vandana
+  steps:
+  - intent: select_sandhya_vandana
+  - action: action_provide_daily_puja_details
+  
+
+- story: Select Tulsi Puja
+  steps:
+  - intent: select_tulsi_puja
+  - action: action_provide_daily_puja_details
+    
+
+- story: Select Surya Namaskar
+  steps:
+  - intent: select_surya_namaskar
+  - action: action_provide_daily_puja_details
+  
+
+- story: Select Gayatri Mantra Japa
+  steps:
+  - intent: select_gayatri_mantra_japa
+  - action: action_provide_daily_puja_details
+ 
+- story: Select Agnihotra
+  steps:
+  - intent: select_agnihotra
+  - action: action_provide_daily_puja_details
+      
+
+- story: Select Deva Darshan
+  steps:
+  - intent: select_deva_darshan
+  - action: action_provide_daily_puja_details
+     
+- story: Select Hanuman Chalisa
+  steps:
+  - intent: select_hanuman_chalisa
+  - action: action_provide_daily_puja_details
+
+
+# personal puja
+- story: select_griha_pravesh_puja
+  steps:
+  - intent: select_griha_pravesh_puja
+  - action: action_provide_personal_puja_details
+
+- story: select_birthday_puja
+  steps:
+  - intent: select_birthday_puja
+  - action: action_provide_personal_puja_details
+
+
+- story: select_vivah_puja
+  steps:
+  - intent: select_vivah_puja
+  - action: action_provide_personal_puja_details
+
+
+- story: select_sankalp_puja
+  steps:
+  - intent: select_sankalp_puja
+  - action: action_provide_personal_puja_details
+
+
+- story: select_namkaran_puja
+  steps:
+  - intent: select_namkaran_puja
+  - action: action_provide_personal_puja_details
+
+
+- story: select_sundarkand_path
+  steps:
+  - intent: select_sundarkand_path
+  - action: action_provide_personal_puja_details
+
+
+
+
+# festival puja
+- story: select_makar_sankranti
+  steps:
+  - intent: select_makar_sankranti
+  - action: action_provide_fesival_puja_details
+
+
+- story: select_maha_shivaratri
+  steps:
+  - intent: select_maha_shivaratri
+  - action: action_provide_fesival_puja_details
+
+
+- story: select_holi_dahan
+  steps:
+  - intent: select_holi_dahan
+  - action: action_provide_fesival_puja_details
+
+
+- story: select_ram_navami
+  steps:
+  - intent: select_ram_navami
+  - action: action_provide_fesival_puja_details
+
+
+- story: select_raksha_bandhan
+  steps:
+  - intent: select_raksha_bandhan
+  - action: action_provide_fesival_puja_details
+ 
+
+- story: select_krishna_janmashtami
+  steps:
+  - intent: select_krishna_janmashtami
+  - action: action_provide_fesival_puja_details
+
+
+- story: select_ganesha_chaturthi
+  steps:
+  - intent: select_ganesha_chaturthi
+  - action: action_provide_fesival_puja_details
+
+
+- story: select_navratri
+  steps:
+  - intent: select_navratri
+  - action: action_provide_fesival_puja_details
+
+- story: select_karwa_chauth
+  steps:
+  - intent: select_karwa_chauth
+  - action: action_provide_fesival_puja_details
+ 
+
+- story: select_dhanteras
+  steps:
+  - intent: select_dhanteras
+  - action: action_provide_fesival_puja_details
+ 
+
+- story: select_diwali
+  steps:
+  - intent: select_diwali
+  - action: action_provide_fesival_puja_details
+
+
+
+
+
+
+# other festival puja these puja are not included in option
+- story: ask_basant_panchami
+  steps:
+  - intent: ask_basant_panchami
+  - action: utter_basant_panchami
+
+
+- story: ask_gangaur
+  steps:
+  - intent: ask_gangaur
+  - action: utter_gangaur
+
+- story: ask_hanuman_jayanti
+  steps:
+  - intent: ask_hanuman_jayanti
+  - action: utter_hanuman_jayanti
+
+- story: ask__nag_panchami
+  steps:
+  - intent: ask_nag_panchami
+  - action: utter_nag_panchami
+
+- story: ask_vishwakarma_puja
+  steps:
+  - intent: ask_vishwakarma_puja
+  - action: utter_vishwakarma_puja
+
+- story: ask_govardhan
+  steps:
+  - intent: ask_govardhan
+  - action: utter_govardhan
+
+- story: ask_tulsi_vivah
+  steps:
+  - intent: ask_tulsi_vivah
+  - action: utter_tulsi_vivah
+
+
+#puja samgri code
+- story: Puja Samgris
+  steps:
+  - intent: puja_samgri_list
+  - action: actions_puja_samgri_list
+
+
+# - story: puja items
+#   steps:
+#   - intent: puja_items_details
+#   - action: utter_puja_items_details
+
+# - story: puja status
+#   steps:
+#   - intent: puja_status_details
+#   - action: utter_puja_status_details
+
+# - story: puja ornaments
+#   steps:
+#   - intent: puja_ornaments_details
+#   - action: utter_puja_ornaments_details
+
+# - story:  puja cloths
+#   steps:
+#   - intent: puja_cloths_details
+#   - action: utter_puja_cloths_details
+
+
+- story: contact
+  steps:
+  - intent: contact_details
+  - action: utter_contact_details
+
+
+
+- story: ask for puja items
+  steps:
+    - intent: Puja_items_details
+    - action: utter_puja_items_details
+
+- story: ask for puja status
+  steps:
+    - intent: Puja_status_details
+    - action: utter_puja_status_details
+
+- story: ask for puja ornaments
+  steps:
+    - intent: Puja_ornaments_details
+    - action: utter_puja_ornaments_details
+
+- story: ask for puja cloths
+  steps:
+    - intent: Puja_cloths_details
+    - action: utter_puja_cloths_details
